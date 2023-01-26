@@ -157,3 +157,67 @@ footer {
   border-radius: 4px;
   width: 60px;
 }
+
+.blog-header{
+  margin: 10px;
+  padding: 20px;
+}
+
+.blog-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-post{
+  flex: 1;
+  width: 90%;
+  margin: 10px;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  text-decoration: none;
+}
+
+.post-header{
+  font-size: 30px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  color: darkgrey;
+}
+
+hr{
+  max-width: 80%;
+}
+
+.comparison{
+  /* text-align: center; */
+  background-color: lightblue;
+  padding-top: 20px;
+  border: solid red 2px;
+}
+
+.comparison-content{
+  text-align: justify;
+  margin: 20px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-box {
+  margin: 10px 0;
+}
+
+.caption {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.centered-element { margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }

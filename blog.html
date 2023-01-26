@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Blog</title>
+    <style>
+        header {
+            position: relative;
+            bottom: 10px;
+            height: 170px;
+        }
+
+        .head {
+            position: relative;
+            top: 10px;
+        }
+
+        .logo {
+            width: 220px;
+            height: 100px;
+            position: relative;
+            left: 180px;
+            top: 50px;
+        }
+
+        .logo img {
+            width: 70px;
+            height: 70px;
+        }
+
+        .logo h2 {
+            position: relative;
+            bottom: 50px;
+            font-size: 20px;
+            font-family: monospace;
+            font-weight: bold;
+            left: 64px;
+        }
+
+        .search-box {
+            width: 380px;
+            height: 50px;
+            position: relative;
+            left: 530px;
+            bottom: 40px;
+
+        }
+
+        .search-box input {
+            width: 350px;
+            height: 25px;
+            border: 1px solid #e6e6e6;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            padding: 10px;
+            padding-left: 20px;
+            margin: 5px;
+        }
+
+        .search {
+            width: 70px;
+            height: 47px;
+            background-color: #40A944;
+            border-style: none;
+            position: relative;
+            left: 386px;
+            bottom: 52px;
+            padding: 10px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            cursor: pointer;
+        }
+
+        .search:hover {
+            background-color: #222222;
+        }
+
+        .extra {
+            display: flex;
+            position: relative;
+            width: 25rem;
+            left: 66rem;
+            bottom: 68px;
+            cursor: pointer;
+        }
+
+        .register:hover {
+            color: #40A944;
+        }
+
+        nav ul li a:hover {
+            color: #40A944;
+        }
+
+        .slider {
+            background-color: #e6e6e6;
+            height: 480px;
+            position: relative;
+            top: 10px;
+        }
+
+        #img {
+            width: 30%;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+            left: 800px;
+            bottom: 30px;
+        }
+
+        #img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            width: 30%;
+            position: relative;
+            bottom: 380px;
+            left: 200px;
+        }
+
+        .content a {
+            background-color: #40A944;
+            padding: 10px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 15px;
+            font-family: sans-serif;
+            color: white;
+            letter-spacing: 3px;
+            position: relative;
+            top: 40px;
+        }
+
+        .content a:hover {
+            background-color: #222222;
+        }
+
+        .content2 {
+            /* border: 2px solid red; */
+            position: relative;
+            top: 80px;
+            display: flex;
+            height: 130px;
+            justify-content: space-around;
+        }
+
+        .content2 section {
+            /* border: 1px solid black; */
+            width: 270px;
+            height: 100px;
+        }
+
+        .benefit {
+            position: relative;
+            left: 50px;
+            bottom: 38px;
+            font-size: 18px;
+            font-weight: 400;
+            color: #222222;
+            font-family: sans-serif;
+            margin-bottom: 8px;
+        }
+
+        .para {
+            color: #777777;
+            position: relative;
+            left: 50px;
+            bottom: 38px;
+            font-size: 15px;
+            line-height: 1.5;
+            font-family: sans-serif;
+            width: 190px;
+
+        }
+
+        .product {
+            width: 260px;
+            height: 260px;
+        }
+
+        .new {
+            color: white;
+            font-size: 12px;
+            background-color: #40A944;
+            padding: 5px 8px;
+            border-radius: 8px;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        .table {
+            width: 360px;
+            height: 380px;
+        }
+
+        .bonsai-category {
+            margin-top: 25px;
+            padding-top: 10px;
+            padding-left: 30px;
+            font-family: sans-serif;
+            font-weight: lighter;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #4e4e4e;
+        }
+
+        .bonsai-name {
+            text-decoration: none;
+            color: #222222;
+            letter-spacing: 3px;
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight: 535;
+        }
+
+        .bonsai-name:hover {
+            color: #40A944;
+        }
+
+        .price {
+            font-family: sans-serif;
+            font-size: 18px;
+            padding-left: 20px;
+        }
+
+        .shop-now {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            top: 130px;
+        }
+
+        .shop {
+            text-decoration: none;
+            color: #f9f9f9;
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            position: relative;
+            left: 70px;
+            top: 45px;
+            background-color: #40A944;
+            padding: 8px 13px;
+            border-radius: 10px;
+            letter-spacing: 2px;
+        }
+
+        .shop:hover {
+            background-color: #222222;
+        }
+
+        .deal {
+            position: relative;
+            top: 150px;
+            height: 600px;
+        }
+
+        .count {
+            display: flex;
+            width: 400px;
+            height: 58px;
+        }
+
+        .count section {
+            height: 58px;
+        }
+
+        .count section input {
+            width: 20px;
+            padding: 5px;
+            margin: 5px;
+            padding-left: 15px;
+            padding-right: 10px;
+            background-color: rgba(240, 237, 237, 0.9);
+            height: 40px;
+            border-color: transparent;
+            color: #222222;
+            text-align: center;
+        }
+
+        .count section label {
+            font-size: 8px;
+            font-family: sans-serif;
+            font-weight: lighter;
+            color: #616161;
+            position: relative;
+            bottom: 27px;
+            left: 3px;
+            letter-spacing: 1px;
+        }
+
+        .offer a {
+            position: relative;
+            background-color: #40A944;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            position: relative;
+            left: 10px;
+            top: 50px;
+        }
+
+        .offer a:hover {
+            background-color: #222222;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div style="position:relative; left:80%; bottom: 33%; width: 150px; cursor: pointer;">
+                <img src="img/customer.png" alt="customer-logo"
+                    style="width: 25px; height: 25px; position: relative; right: 10px;bottom: 2px;">
+                <h3 class="customer"
+                    style="display: inline; font-size: 16px; font-family:sans-serif; font-weight: lighter; letter-spacing: 2px; position: relative; bottom: 13px;">
+                    01-3457802</h3>
+                <p class="customer"
+                    style="font-size: 10px; font-weight: lighter; font-family: monospace; position: relative; left: 40px; bottom: 15px;">
+                    Customer Support</p>
+            </div>
+        </nav>
+        <div class="head" style="height: 150px;">
+            <div class="logo">
+                <img src="img/logo.png" alt="logo" id="logo">
+                <h2>Bonsai World</h2>
+            </div>
+
+            <div class="search-box">
+                <input type="text" name="search" placeholder="Search here...">
+                <button class="search">
+                    <img src="img/search.png" alt="search" width="30px" height="30px">
+                </button>
+            </div>
+            <div class="extra">
+                <h3
+                    style="font-family:sans-serif; font-size: 16px; font-weight: lighter; color: #222222; letter-spacing: 2px;">
+                    <span class="register">Register</span> / <span class="register
+               ">Login</span>
+                </h3>
+                <img src="img/heart.png" alt="bookmark"
+                    style="width: 70px; height: 70px; position: relative; bottom: 25px;">
+                <img src="img/cart.png" alt="cart" style="width: 70px; height: 70px; position: relative; bottom: 25px;">
+            </div>
+        </div>
+    </header>
+    <div class="blog-header">
+        <p class="post-header">Technology;</p>
+        <p class="post-header">Technology on Business of Bonsai Plant;</p>
+        <br>
+        <span>By: BonsaiWorld *</span>
+        <span>23 Jan 2023</span>
+    </div>
+    <hr>
+    <div class="blog-container">
+        <div class="blog-post">
+            <p class="post-header">What is Technology?</p>
+            <br>
+            <p>Technology refers to the application of scientific knowledge for practical purposes, often in the form of
+                tools, machines, and systems. It encompasses a wide range of fields, including information technology,
+                communications, transportation, healthcare, and manufacturing. Technology plays a crucial role in modern
+                society, driving innovation, increasing efficiency, and improving the quality of life.</p>
+        </div>
+        <hr>
+        <div class="blog-post">
+            <p class="post-header">Positive Impacts of Technology</p>
+            <br>
+            <p>
+                The positive impact of technology on society and individuals is undeniable. One of the most significant
+                impacts is the increase in productivity and efficiency in various industries, such as manufacturing,
+                agriculture and healthcare. Technology has also greatly improved communication and access to information
+                through the internet and social media, allowing people to connect and share knowledge more easily.
+                Advancements in healthcare and medicine have led to better diagnosis and treatment of diseases,
+                improving the overall health and well-being of individuals. Technology has also brought convenience and
+                ease of access to goods and services through online commerce, making it easier for people to access what
+                they need. Furthermore, technology has improved transportation and logistics, making it easier and
+                faster to move people and goods. Additionally, technology has made our lives safer through the use of
+                technology in fields such as transportation and construction. Technology has also played a crucial role
+                in advancing renewable energy and conservation, reducing the impact on the environment. Lastly,
+                technology has improved education and access to financial services, making them more accessible to
+                everyone. Overall, technology has greatly improved our lives, and it will continue to shape the future
+                in positive ways.
+            </p>
+        </div>
+        <hr>
+        <div class="blog-post">
+            <p class="post-header">Negative Impacts of Technology</p>
+            <br>
+            <p>
+                The negative impact of technology on society and individuals is a growing concern. One of the most
+                significant negative impacts is the displacement of jobs, as automation and artificial intelligence are
+                increasingly able to perform tasks that were previously done by humans. This can lead to increased
+                unemployment and a widening income gap. Additionally, technology has also had a negative impact on
+                privacy and security, as personal data is increasingly collected and shared without individuals' consent
+                or knowledge. The excessive use of technology, particularly social media, can also lead to addiction and
+                negative effects on mental health, such as depression and anxiety. Technology has also been linked to
+                the disruption of traditional industries and cultures. Technology can also lead to a dependence on it,
+                which can decrease critical thinking, problem-solving skills, and creativity. Furthermore, the increased
+                energy consumption and e-waste from technology can lead to environmental degradation. In short, while
+                technology has brought many benefits, it's important to address and mitigate these negative impacts.
+            </p>
+        </div>
+        <hr>
+        <div class="blog-post">
+            <p class="post-header">How Technology have impacted on Business of Bonsai Plant</p>
+            <br>
+            <p>Technology has greatly impacted the business of bonsai plants in recent years. One of the most
+                significant ways technology has impacted the bonsai industry is through automation and robotics, which
+                have allowed growers to increase efficiency and productivity in the cultivation and care of bonsai
+                plants. Additionally, technology has also had a major impact on marketing and sales in the bonsai
+                industry, with the rise of e-commerce websites and social media platforms enabling bonsai businesses to
+                reach a wider audience and target specific demographics. These digital platforms also provide a way for
+                businesses to improve communication and collaboration with suppliers, customers, and other stakeholders.
+                Furthermore, technology has also allowed for better inventory tracking and management, allowing for more
+                efficient and effective business operations. However, technology has also created some challenges for
+                bonsai businesses, such as increased competition from overseas growers and potential job displacement.
+                Overall, technology has had a significant impact on the bonsai industry, and businesses must carefully
+                evaluate how they can best take advantage of technological advancements while also addressing potential
+                challenges.</p>
+        </div>
+        <hr>
+        <div class="blog-post">
+            <p class="post-header">Conclusion</p>
+            <br>
+            <p>In conclusion, technology has both positive and negative impacts on the business of bonsai plants. On one
+                hand, technology can increase efficiency, productivity, and reach through automation, digital marketing
+                and e-commerce. On the other hand, it can also create challenges such as increased competition,
+                dependency, and costs, and also job displacement. Businesses in the bonsai industry must carefully
+                evaluate the pros and cons of technology adoption and implement it in a strategic and profitable way.
+                Overall, technology can be a powerful tool for growth and innovation in the bonsai business, but it must
+                be used judiciously and with consideration for the potential impacts on the industry and its workers.
+            </p>
+        </div>
+        <hr>
+    </div>
+      
+    <div style="background-color: #e6e6e6; width: 100%; height: 300px; position: relative; top: 230px;">
+        <figure>
+            <img src="img/offer.png" alt="bonsai"
+                style="width: 500px; height: 500px; position: relative; left: 600px; bottom: 100px;">
+            <img src="img/banner.png" alt="bonsai"
+                style="width: 550px; height: 300px; position: relative; left: 300px; bottom: 200px;">
+        </figure>
+        <div class="offer" style="position: relative; bottom: 450px; left: 200px; width: 400px; height: 240px;">
+            <h4
+                style="color: #40A944; font-size: 15px; font-family: sans-serif; font-weight: 500; letter-spacing: 2px; position: relative; left: 13px;">
+                HAPPY NEW YEAR !</h2>
+                <h2
+                    style="font-size: 40px; font-weight: bold; font-family: monospace; letter-spacing: 2px; color: #222222; margin: 10px;">
+                    SALE 50% OFF </h2>
+                <h3
+                    style="color:#4e4e4e; font-size: 25px; font-weight: 500; font-family:sans-serif; word-spacing: 10px; position: relative; left: 10px;">
+                    All BONSAI PRODUCTS</h3>
+                <a href="#">Shop Now</a>
+        </div>
+    </div>
+    <footer>
+        <div class="foot" style="width: 100%; height: 450px;">
+            <div class="logo">
+                <img src="img/logo.png" alt="logo" id="logo">
+                <h2>Bonsai World</h2>
+            </div>
+            <div class="address">
+                <p
+                    style="font-size: 14px; font-family: sans-serif; font-weight: 400; color: #929292; width: 500px;letter-spacing: 2px; word-spacing: 3px; line-height: 25px; padding: 10px; margin-bottom: 10px;">
+                    Bonsai World is a company that sells bonsai plants and supplies. We also offer educational resources
+                    on bonsai cultivation and design.</p>
+                <p class="footer-para"><span class="span">Address : </span> Kamal Pokhari, Kathmandu, Nepal</p>
+                <p class="footer-para"><span class="span">Email : </span>admin@bonsaiworld.com</p>
+                <p class="footer-para"><span class="span">Call us : </span> 01-3457802</p>
+            </div>
+            <div class="quick-link">
+                <h3 class="footer-title">Quick link</h3>
+                <ul class="footer-quick">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h3 class="footer-title" style="position: relative; bottom:10px; left: 10px;">Sign Up Newsletter</h3>
+                <p
+                    style="font-size: 14px; font-family: sans-serif; font-weight: 400; color: #929292; width: 300px;letter-spacing: 2px; word-spacing: 3px; line-height: 25px; padding: 10px; margin-bottom: 10px; position: relative; top: 10px;">
+                    Get updates by subscribe our weekly newsletter</p>
+
+                <input type="email" name="search" placeholder="Email address..." style=" width: 220px;
+                    height: 25px;
+                    border: 1px solid #e6e6e6;
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                    padding: 10px;
+                    padding-left: 30px;
+                    margin: 5px;
+                    position: relative;
+                    top: 10px;">
+                <button class="subscribe" type="submit">
+                    <h3
+                        style="width: 40px; font-size: 13px; font-family: sans-serif; color: white; padding: 5px 10px 5px 0;">
+                        subscribe</h3>
+                </button>
+
+            </div>
+            <div class="footer-payment">
+                <p
+                    style="font-size: 13px; font-family: sans-serif; font-weight: 400; color: rgb(243, 243, 243);width: 600px; letter-spacing: 2px; word-spacing: 3px; position: relative; left: 185px; top: 30px;line-height: 23px;">
+                    Copyright &#169; 2023 Bonsai World All Rights Reserved.Design by Bonsaiworld.Com
+                </p>
+                <ul class="footer-quick"
+                    style="display: flex; justify-content: flex-end; position: relative; right: 100px; bottom: 47px;">
+                    <li><img src="img/cash1.png" alt="paymetn"></li>
+                    <li><img src="img/visa1.png" alt="payement"></li>
+                    <li><img src="img/master.png" alt="payement"></li>
+                </ul>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
